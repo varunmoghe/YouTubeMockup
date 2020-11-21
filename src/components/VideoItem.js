@@ -6,7 +6,7 @@ const VideoItem = ({ video, onVideoSelect }) => {
         // To make sure we send the video along with onVideoSelect callback we use arrow function inside onClick method 
         <div onClick={() => onVideoSelect(video)} className="video-item item">
             {/* <video src="https://youtu.be/lDzywboBI2M"></video> */}
-            <img className="ui image" src={video.snippet.thumbnails.medium.url}/>
+            <img alt={video.snippet.title} className="ui image" src={video.snippet.thumbnails.medium.url}/>
             <div className="content">
                 <div className="header">{video.snippet.title}</div>
             </div>
